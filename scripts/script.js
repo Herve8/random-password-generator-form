@@ -1,4 +1,4 @@
-// when clicked the "Generate Password" button in the html document triigers an event which will prompt the user
+// when clicked the "Generate Password" button in the html document triggers an event which will prompt the user
 //about the password selection criteria
 document.querySelector("#generate").addEventListener("click", writePassword);
 
@@ -14,12 +14,6 @@ var confirmNumbersInPassword;
 var confirmCharacters;
 var optionUpperCase;
 var optionLowerCase;
-
-//document.getElementById("#generate").onclick = promptNoOfChars;
-
- //WHEN I click the button to generate a password
-//THEN I am presented with a series of prompts for password criteria
-
 
 //when the user clicks on the Generate Password button on the form
  function generatePassword(){
@@ -55,7 +49,6 @@ var optionUpperCase = confirm("Would you like to include upper case letters in y
 var optionLowerCase = confirm("Would you like to include lower case letters in your password? OK to select/Cancel to omit");
 
  //Based on the users's selection option input should be validated and at least one character type should be selected
-
 if(confirmNumbersInPassword === false || confirmCharacters === false ||
   optionUpperCase === false || optionLowerCase === false){
     alert("Looks like there's on option that you've missed out! Please choose one password option");
@@ -66,14 +59,7 @@ if(confirmNumbersInPassword === false || confirmCharacters === false ||
     optionUpperCase = confirm("Would you like to include upper case letters in your password? OK to select/Cancel to omit");
     optionLowerCase = confirm("Would you like to include lower case letters in your password? OK to select/Cancel to omit");
   }
-  /*console.log(confirmNumbersInPassword);
-  console.log(confirmCharacters);
-  console.log(optionUpperCase);
-  console.log(optionLowerCase);*/
-
-  //Password selection criteria will now be based on users' output
-  //The concat() method used will merge the users' password selection criteria together to output on password
-
+  
   //Assign password characters to an empty array of charsInPassword[]
   var charsInPassword = [];
 
@@ -105,10 +91,7 @@ if(confirmNumbersInPassword === false || confirmCharacters === false ||
   return passwordRandomGenerator;
 }
 
-     // Assignment Code
-
-
-// Write password to the #password input
+ // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -116,22 +99,3 @@ function writePassword() {
   passwordText.value = password;
 
 }
-//var generateBtn = document.querySelector("#generate");
-// Add event listener to generate button
-//generateBtn.addEventListener("click", writePassword);
-
-
-
-
-//WHEN I answer each prompt
-//THEN my input should be validated and at least one character type should be selected
-
-//WHEN all prompts are answered
-//THEN a password is generated that matches the selected criteria
-
-
-
-//WHEN the password is generated
-//THEN the password is either displayed in an alert or written to the page
-
-
